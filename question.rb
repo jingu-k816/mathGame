@@ -1,12 +1,10 @@
 class Question 
-  def question
+  attr_accessor :answer, :question
+  def initialize
     randomNumber1 = rand(1...20)
     randomNumber2 = rand(1...20)
-    puts "What does #{randomNumber1} plus #{randomNumber2} equal?"
-    print "> "
-    answer = gets.chomp
+    @question = "What does #{randomNumber1} plus #{randomNumber2} equal?"
+    @answer = randomNumber1 + randomNumber2
   end
-end
 
-h1 = Question.new
-h1.question
+end
